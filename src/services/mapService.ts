@@ -249,6 +249,7 @@ export const predefinedRoutes: Route[] = [
 ];
 
 // 初始化地圖
+// 初始化地圖
 export const initMap = (container: HTMLElement): L.Map => {
   const map = L.map(container).setView(YUNTECH_CENTER, 16);
   
@@ -256,6 +257,9 @@ export const initMap = (container: HTMLElement): L.Map => {
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
+  
+  // 修復Leaflet圖標問題 - 使用TypeScript友好的方式
+  L.Icon.Default.imagePath = '/images/leaflet/';
   
   return map;
 };
