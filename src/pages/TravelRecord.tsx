@@ -16,14 +16,14 @@ interface TravelRecord {
   points: number;
 }
 // 成就介面定義
-interface Achievement {
-  id: number;
-  title: string;
-  description?: string;
-  icon?: string;
-  progress: number;
-  unlocked: boolean;
-}
+// interface Achievement {
+//   id: number;
+//   title: string;
+//   description?: string;
+//   icon?: string;
+//   progress: number;
+//   unlocked: boolean;
+// }
 const TravelRecord = () => {
   const [mode, setMode] = useState<TransportMode>('walking')
   const [distance, setDistance] = useState(1)
